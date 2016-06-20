@@ -13,5 +13,6 @@
  *  @param controller         要显示的controller
  */
 
-
+```
  [UpdateVersionTool updateVersionForAppID:@"1111" isShowReleaseNotes:YES showController:self];
+```
