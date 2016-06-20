@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A2562A91D17EA7300054F6A /* UpdateVersionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2562A81D17EA7300054F6A /* UpdateVersionTool.m */; };
 		5A9AFAA71D1794E300EC0A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AFAA61D1794E300EC0A6E /* main.m */; };
 		5A9AFAAA1D1794E300EC0A6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AFAA91D1794E300EC0A6E /* AppDelegate.m */; };
 		5A9AFAAD1D1794E300EC0A6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AFAAC1D1794E300EC0A6E /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		5A9AFAB51D1794E300EC0A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9AFAB31D1794E300EC0A6E /* LaunchScreen.storyboard */; };
 		5A9AFAC01D1794E300EC0A6E /* AppVersionUpdateDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AFABF1D1794E300EC0A6E /* AppVersionUpdateDemoTests.m */; };
 		5A9AFACB1D1794E300EC0A6E /* AppVersionUpdateDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AFACA1D1794E300EC0A6E /* AppVersionUpdateDemoUITests.m */; };
-		5ABAF2991D17C5680000B5C9 /* UpdateVersionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABAF2981D17C5680000B5C9 /* UpdateVersionTool.m */; };
 		C80CD5AAFDC8A1A44D945456 /* Pods_AppVersionUpdateDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CEDB1D44F55547EBC21CC0 /* Pods_AppVersionUpdateDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		07BB34F2314576793694484E /* Pods-AppVersionUpdateDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppVersionUpdateDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppVersionUpdateDemo/Pods-AppVersionUpdateDemo.release.xcconfig"; sourceTree = "<group>"; };
+		5A2562A71D17EA7300054F6A /* UpdateVersionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateVersionTool.h; sourceTree = "<group>"; };
+		5A2562A81D17EA7300054F6A /* UpdateVersionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateVersionTool.m; sourceTree = "<group>"; };
 		5A9AFAA21D1794E300EC0A6E /* AppVersionUpdateDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppVersionUpdateDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9AFAA61D1794E300EC0A6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A9AFAA81D1794E300EC0A6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,8 +56,6 @@
 		5A9AFAC61D1794E300EC0A6E /* AppVersionUpdateDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppVersionUpdateDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9AFACA1D1794E300EC0A6E /* AppVersionUpdateDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppVersionUpdateDemoUITests.m; sourceTree = "<group>"; };
 		5A9AFACC1D1794E300EC0A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5ABAF2971D17C5680000B5C9 /* UpdateVersionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateVersionTool.h; sourceTree = "<group>"; };
-		5ABAF2981D17C5680000B5C9 /* UpdateVersionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateVersionTool.m; sourceTree = "<group>"; };
 		69CEDB1D44F55547EBC21CC0 /* Pods_AppVersionUpdateDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppVersionUpdateDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		990F305336AAE4BFC81AF2D5 /* Pods-AppVersionUpdateDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppVersionUpdateDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppVersionUpdateDemo/Pods-AppVersionUpdateDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A2562A61D17EA7300054F6A /* UpdateVersionTool */ = {
+			isa = PBXGroup;
+			children = (
+				5A2562A71D17EA7300054F6A /* UpdateVersionTool.h */,
+				5A2562A81D17EA7300054F6A /* UpdateVersionTool.m */,
+			);
+			path = UpdateVersionTool;
+			sourceTree = "<group>";
+		};
 		5A9AFA991D1794E300EC0A6E = {
 			isa = PBXGroup;
 			children = (
@@ -115,13 +124,12 @@
 				5A9AFAA91D1794E300EC0A6E /* AppDelegate.m */,
 				5A9AFAAB1D1794E300EC0A6E /* ViewController.h */,
 				5A9AFAAC1D1794E300EC0A6E /* ViewController.m */,
+				5A2562A61D17EA7300054F6A /* UpdateVersionTool */,
 				5A9AFAAE1D1794E300EC0A6E /* Main.storyboard */,
 				5A9AFAB11D1794E300EC0A6E /* Assets.xcassets */,
 				5A9AFAB31D1794E300EC0A6E /* LaunchScreen.storyboard */,
 				5A9AFAB61D1794E300EC0A6E /* Info.plist */,
 				5A9AFAA51D1794E300EC0A6E /* Supporting Files */,
-				5ABAF2971D17C5680000B5C9 /* UpdateVersionTool.h */,
-				5ABAF2981D17C5680000B5C9 /* UpdateVersionTool.m */,
 			);
 			path = AppVersionUpdateDemo;
 			sourceTree = "<group>";
@@ -350,8 +358,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2562A91D17EA7300054F6A /* UpdateVersionTool.m in Sources */,
 				5A9AFAAD1D1794E300EC0A6E /* ViewController.m in Sources */,
-				5ABAF2991D17C5680000B5C9 /* UpdateVersionTool.m in Sources */,
 				5A9AFAAA1D1794E300EC0A6E /* AppDelegate.m in Sources */,
 				5A9AFAA71D1794E300EC0A6E /* main.m in Sources */,
 			);
