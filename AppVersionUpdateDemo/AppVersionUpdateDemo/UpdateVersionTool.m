@@ -26,9 +26,27 @@
  */
 
 
+
 +(void)updateVersionForAppID:(NSString *)appid
           isShowReleaseNotes:(BOOL)isShowReleaseNotes
-              showController:(UIViewController *)controller{
+              showController:(UIViewController *)controller
+{
+    // 获取网络状态
+    NSString *status = [self getNetWorkStatus];
+    NSLog(@"%@", status);
+    
+    // 只有当网络为WiFi 和 4G 的情况下 提醒更新
+    if ([status isEqualToString:@"WIFI"] || [status isEqualToString:@"4G"]) {
+        
+        [self getVersionForAppID:appid isShowReleaseNotes:isShowReleaseNotes showController:controller];
+    }
+}
+
+#pragma mark - 获取版本信息
++(void)getVersionForAppID:(NSString *)appid
+       isShowReleaseNotes:(BOOL)isShowReleaseNotes
+           showController:(UIViewController *)controller
+{
     
     NSString *urlStr = [NSString stringWithFormat:@"http://itunes.apple.com/cn/lookup?id=%@", appid];
     
@@ -80,7 +98,56 @@
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         
     }];
+}
+
+#pragma mark - 获取当前网络状态
++(NSString *)getNetWorkStatus{
     
+    UIApplication *app = [UIApplication sharedApplication];
+    
+    NSArray *children = [[[app valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
+    
+    NSString *status = [[NSString alloc] init];
+    
+    int netType = 0;
+    //获取到网络返回码
+    for (id child in children) {
+        
+        if ([child isKindOfClass:NSClassFromString(@"UIStatusBarDataNetworkItemView")]) {
+            
+            //获取到状态栏
+            netType = [[child valueForKeyPath:@"dataNetworkType"]intValue];
+            
+            switch (netType) {
+                case 0:
+                    status = @"无网络";
+                    break;
+                    
+                case 1:
+                    status = @"2G";
+                    break;
+                    
+                case 2:
+                    status = @"3G";
+                    break;
+                    
+                case 3:
+                    status = @"4G";
+                    break;
+                    
+                case 5:
+                {
+                    status = @"WIFI";
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+    }
+    //根据状态选择
+    return status;
 }
 
 @end
