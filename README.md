@@ -12,4 +12,6 @@
  *  @param isShowReleaseNotes 是否显示版本注释
  *  @param controller         要显示的controller
  */
+
+
  [UpdateVersionTool updateVersionForAppID:@"1111" isShowReleaseNotes:YES showController:self];
